@@ -1,0 +1,73 @@
+<style>
+    #testo {
+        width: 50%;
+        text-align: left;
+    }
+
+    #bottoneResetta {
+        width: 50%;
+        text-align: right;
+    }
+
+    #nome {
+        color:  rgb(25, 118, 210);
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    #bottoneShare {
+        background-color:  rgb(25, 118, 210);
+        color: white;
+    }
+
+    #aggiungi { 
+        text-align: right;
+        width: 100%;
+        color: rgb(25, 118, 210); 
+        border: none;
+    }
+</style>
+
+<!-- --------------------------------------- INIZIO BODY --------------------------------------- -->
+
+<div style="height: 1cm;">
+    <span style="font-size: 30px;">
+        <strong>Products </strong>
+    </span>
+</div>
+
+
+<div *ngFor="let item of items"> 
+    <p id="nome">{{item.nome}}</p>
+    <p>Description: {{item.descrizione}}</p>
+    <button id="bottoneShare" (click)="condividi(item.nome)">Share</button>    
+</div>
+   
+
+
+<br>
+<br>
+
+<table style="width: 100%;">
+    <th id="testo">
+        <div *ngIf="attivo; else elseBlock">
+            <span><strong>Ho comprato {{nome}}!!</strong></span>
+        </div>
+        <ng-template #elseBlock>
+            <strong>Non c'è niente da condividere!!</strong>
+        </ng-template>
+    </th>
+    <th id="bottoneResetta">
+        <button (click)="reset()">Resetta</button> 
+    </th>
+</table>
+
+<div style="position: relative; bottom: -2em;">
+    <button  id="aggiungi" (click)="aggiungi()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+        </svg>
+    </button>
+</div>
+
