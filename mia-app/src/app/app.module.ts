@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AppTopBar } from './top/app-top-bar.component';
 import { AppList } from './list/app-product-list.component';
+import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     AppTopBar,
-    AppList
-  ],
+    AppList,
+    ProductAlertsComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule

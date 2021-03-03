@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { ITEMS } from '../../items';
 
 @Component({
   selector: 'app-product-list',
-  templateUrl: './app-product-list.component.html'
+  templateUrl: './app-product-list.component.html',
+  styleUrls: ['./app-product-list.component.css']
 })
 
 export class AppList {
@@ -23,5 +25,6 @@ export class AppList {
 
     aggiungi() {
       window.alert("Aggiungi elemento");
+      
     }
 }
