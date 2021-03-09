@@ -1,0 +1,29 @@
+
+    #testo {
+        width: 50%;
+        text-align: left;
+    }
+
+    #bottoneResetta {
+        width: 50%;
+        text-align: right;
+    }
+
+    #nome {
+        color:  rgb(25, 118, 210);
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    #bottone {
+        background-color:  rgb(25, 118, 210);
+        color: white;
+    }
+
+    #aggiungi { 
+        position: relative;
+        top: 90%;
+        left: 95%;
+        color: rgb(25, 118, 210); 
+        border: none;
+    }

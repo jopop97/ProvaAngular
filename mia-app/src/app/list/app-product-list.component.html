@@ -1,33 +1,6 @@
-<style>
-    #testo {
-        width: 50%;
-        text-align: left;
-    }
-
-    #bottoneResetta {
-        width: 50%;
-        text-align: right;
-    }
-
-    #nome {
-        color:  rgb(25, 118, 210);
-        font-weight: bold;
-        font-size: 20px;
-    }
-
-    #bottone {
-        background-color:  rgb(25, 118, 210);
-        color: white;
-    }
-
-    #aggiungi { 
-        position: relative;
-        top: 90%;
-        left: 95%;
-        color: rgb(25, 118, 210); 
-        border: none;
-    }
-</style>
+<head>
+    <link rel="stylesheet" type="text/css" href="app-product-list.component.css">
+</head>
 
 <!-- --------------------------------------- INIZIO BODY --------------------------------------- -->
 
@@ -45,7 +18,8 @@
     <p>Description: {{item.descrizione}}</p>
     <button id="bottone" (click)="condividi(item.nome)">Share</button>   
     <app-product-alerts
-     [product]="item">
+     [product]="item"
+     (notify)="onNotify()">
     </app-product-alerts> 
 </div>
    

@@ -1,3 +1,10 @@
+<style>
+     #bottone {
+        background-color:  rgb(25, 118, 210);
+        color: white;
+    }
+</style>
+
 <p *ngIf="product.prezzo > 700" >
-    <button>Notify Me</button>
+    <button id="bottone" (click)="notify.emit()">Notify Me</button>
 </p>

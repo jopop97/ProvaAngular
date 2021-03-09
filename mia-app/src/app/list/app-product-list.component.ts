@@ -27,4 +27,9 @@ export class AppList {
       window.alert("Aggiungi elemento");
       
     }
+
+    onNotify() {
+      window.alert('You will be notified when the product goes on sale');
+    }
+
 }
